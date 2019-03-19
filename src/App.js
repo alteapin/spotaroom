@@ -37,7 +37,7 @@ class App extends Component {
         <header>
           <Header />
         </header>
-        <main>
+        <main className="main">
           <RoomList
             results={results}
           />

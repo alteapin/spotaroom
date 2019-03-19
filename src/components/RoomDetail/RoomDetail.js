@@ -6,12 +6,13 @@ class RoomDetail extends Component {
     render() {
 
         const { item } = this.props
-        
+
         return (
-            <div>
+            <div className="room-detail_container">
+                <img className="room-image"
+                src={item.photoUrls.homecardHidpi} alt={item.title} />
+                <p>{item.pricePerMonth}€/mes</p>
                 <h2>{item.title}</h2>
-                <p>{item.pricePerMonth}</p>
-                <img src={item.photoUrls.homecardHidpi} alt={item.title} />
             </div>
         );
     }
