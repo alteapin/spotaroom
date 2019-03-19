@@ -1,49 +1,40 @@
 import React, { Component } from 'react';
 import './App.scss';
-import {getRooms} from './services/roomServices.js';
-
+import { getRooms } from './services/roomServices.js';
+import RoomList from './components/RoomList/RoomList';
 
 
 class App extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
-      results : [],
+      results: [],
     };
 
-    this.getRoomsInfo ();
+    this.getRoomsInfo();
   }
 
 
-  getRoomsInfo () {
-    getRooms ()
-    .then(data => {
-      this.setState({
-        results : data.homecards
+  getRoomsInfo() {
+    getRooms()
+      .then(data => {
+        this.setState({
+          results: data.homecards
+        });
       });
-    });
   }
+
 
   render() {
 
+    const results = this.state.results;
+
     return (
       <div className="App">
-      <ul>
-        {this.state.results.map(item =>{
-          return (
-            <li>
-              <div>
-                <h2>{item.title}</h2>
-                <p>{item.pricePerMonth}</p>
-                <img src ={item.photoUrls.homecardHidpi} alt={item.title}/>
-              </div>
-            </li>
-          );
-
-        })}
-      </ul>
+        <RoomList
+          results={results}
+        />
       </div>
     );
   }
