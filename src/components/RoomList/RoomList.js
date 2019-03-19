@@ -8,7 +8,7 @@ class RoomList extends Component {
 
     return (
       <div>
-        <ul>
+        <ul className="room-list">
           {results.map(item => {
             return (
               <li>

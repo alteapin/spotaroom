@@ -11,7 +11,7 @@ class RoomDetail extends Component {
             <div className="room-detail_container">
                 <img className="room-image"
                 src={item.photoUrls.homecardHidpi} alt={item.title} />
-                <p>{item.pricePerMonth}€/mes</p>
+                <p className="room-title">{item.pricePerMonth}€/mes</p>
                 <h2>{item.title}</h2>
             </div>
         );

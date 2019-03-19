@@ -1,4 +1,10 @@
-.room-image{
+.room-detail_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-image {
     width: 250px;
     height: 175px;
+    justify-content: center;
 }
