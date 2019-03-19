@@ -16,6 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://frontend-interview.spotahome.com" ,
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -24,5 +25,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ]  
 }
