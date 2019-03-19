@@ -37,6 +37,7 @@ class App extends Component {
               <div>
                 <h2>{item.title}</h2>
                 <p>{item.pricePerMonth}</p>
+                <img src ={item.photoUrls.homecardHidpi} alt={item.title}/>
               </div>
             </li>
           );
