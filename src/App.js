@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.scss';
 import { getRooms } from './services/roomServices.js';
 import RoomList from './components/RoomList/RoomList';
+import Header from './components/Header/Header';
+
 
 
 class App extends Component {
@@ -32,9 +34,14 @@ class App extends Component {
 
     return (
       <div className="App">
-        <RoomList
-          results={results}
-        />
+        <header>
+          <Header />
+        </header>
+        <main>
+          <RoomList
+            results={results}
+          />
+        </main>
       </div>
     );
   }
