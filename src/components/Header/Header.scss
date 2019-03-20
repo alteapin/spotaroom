@@ -1,5 +1,15 @@
-.header_logo{
+.header_container {
+background-color: white;
+position: fixed;
+top: 0;
+height: 75px;
+width: 100%;
+z-index: 1;
+}
+
+
+.header_logo {
     width: 200px;
-    height: 100px;
+    height: 75px;
     margin-left: 25px;
 }
