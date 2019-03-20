@@ -30,6 +30,6 @@ To make it work, you first have to:
 
 In the terminal, type ctrl/cmd + c to stop it from running. 
 
-http://gph.is/2EI8hC2
+![alt text](http://gph.is/2EI8hC2)
 
 ## We hope you will soon find the house of your dreams!
