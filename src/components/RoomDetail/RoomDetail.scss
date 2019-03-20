@@ -10,10 +10,6 @@
     margin-top: 20px;
 }
 
-// .room-image:hover {
-//     box-shadow: 10px 10px 5px 0px rgba(210,210,210,0.76);
-// }
-
 .room-detail_description {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
@@ -47,7 +43,6 @@
     color: #f09218;
     font-size: 15px;
 }
-
 
 .room-button {
     grid-column: 2 / 3;
