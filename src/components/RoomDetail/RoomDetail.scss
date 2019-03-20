@@ -10,6 +10,10 @@
     margin-top: 20px;
 }
 
+.room-image:hover {
+    border-radius: 10px;
+}
+
 .room-detail_description {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
@@ -40,7 +44,7 @@
     border-radius: 20px;
     padding: 2px 12px;
     margin-right: 20px;
-    color: #f09218;
+    color: #fcd103;;
     font-size: 15px;
 }
 
@@ -56,11 +60,28 @@
     font-size: 12px;
     text-transform: uppercase;
     color: white;
-    border-bottom: 4px solid #146A20
+    border-radius: 4px;
+    background: linear-gradient(-75deg, #3d9f31, #009158, #96B33A, #009B5B, #00A756);
+    background-size: 800%;
+    animation: gradred-green cubic-bezier(0.785, 0.135, 0.15, 0.86) 10s infinite;
 }
+
+    @keyframes gradred-green {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .room-info_button {
     display: none;
+    border-radius: 5px;
 }
 
 @media (min-width: 768px) {
@@ -105,25 +126,46 @@
     .room-book_button {
         grid-column: 3 / 4;
         margin-right: 50px;
+        width: 200px;
+        animation: gradred-green cubic-bezier(0.785, 0.135, 0.15, 0.86) 10s infinite;
+        border-radius: 6px;
     }
+
 
     .room-info_button {
         display: block;
         grid-column: 2 / 3;
         grid-row: 3 / 4;
+        width: 200px;
         margin-top: 7px;
         margin-bottom: 10px;
         margin-left: 20px;
-        margin-right: 20px;
         padding: 5px;
         text-decoration: none;
-        background-color: #fcd103;
         border: none;
         font-size: 12px;
         text-transform: uppercase;
         color: white;
-        border-bottom: 4px solid #f09218;
+        border-radius: 6px;
+        background: linear-gradient(-75deg, #f09218, #fcd103, #FF9C57);
+        background-size: 800%;
+        animation: gradred-orange cubic-bezier(0.785, 0.135, 0.15, 0.86) 10s infinite;
     }
+    
+        @keyframes gradred-orange {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+        
+    
 
 
 }
