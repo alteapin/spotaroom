@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './RoomDetail.scss';
 import PropTypes from 'prop-types';
 
+
 class RoomDetail extends Component {
 
     render() {
@@ -10,6 +11,7 @@ class RoomDetail extends Component {
 
         return (
             <div className="room-detail_container">
+
                     <img className="room-image"
                     src={item.photoUrls.homecardHidpi} alt={item.title} />
 
