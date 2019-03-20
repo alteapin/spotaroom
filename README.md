@@ -2,6 +2,8 @@
 
 
 Welcome to **SpotaRoom** ✨✨
+
+
 Are you planning to move to Madrid? Do you reside in the city but are you looking for a flat? At **SpotaRoom** we know that searching for a flat can be complicated. But thanks to us it will end.
 SpotaRoom is an app, available for mobile and web, in which you will find 30 offers of the best selection of rooms for rent in Madrid.
 Quality is our sign. We want to offer the confidence and security of a quality rental, in the best location and at the best price.
