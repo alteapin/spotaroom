@@ -13,7 +13,7 @@ class RoomList extends Component {
             return (
               <li>
                 <RoomDetail
-                item = {item} />
+                  item={item} />
               </li>
             );
           })}
