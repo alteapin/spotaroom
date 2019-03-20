@@ -10,6 +10,10 @@
     margin-top: 20px;
 }
 
+// .room-image:hover {
+//     box-shadow: 10px 10px 5px 0px rgba(210,210,210,0.76);
+// }
+
 .room-detail_description {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
@@ -35,10 +39,13 @@
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     margin: 0;
-    text-align: right;
-    padding-right: 20px;
-    background: #313131;
-    width: 32px;
+    background: #2c2c2c;
+    max-width: 32px;
+    border-radius: 20px;
+    padding: 2px 12px;
+    margin-right: 20px;
+    color: #f09218;
+    font-size: 15px;
 }
 
 
@@ -47,4 +54,16 @@
     grid-row: 3 / 4;
     margin-top: 7px;
     margin-bottom: 10px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #3d9f31;
+    border: none;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+}
+
+.room-button:hover{
+    border-bottom: 4px solid #146A20;
 }
