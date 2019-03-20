@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     grid-auto-rows: 0.25fr 0.1fr 0.1fr;
-    max-width: 250px;
+    width: 250px;
     background-color: white;
     border-bottom: 3px solid #146A20;
 }
@@ -36,7 +36,7 @@
     grid-row: 2 / 3;
     margin: 0;
     background: #2c2c2c;
-    max-width: 32px;
+    width: 32px;
     border-radius: 20px;
     padding: 2px 12px;
     margin-right: 20px;
@@ -44,7 +44,7 @@
     font-size: 15px;
 }
 
-.room-button {
+.room-book_button {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     margin-top: 7px;
@@ -54,11 +54,76 @@
     background-color: #3d9f31;
     border: none;
     font-size: 12px;
-    font-weight: 300;
     text-transform: uppercase;
     color: white;
+    border-bottom: 4px solid #146A20
 }
 
-.room-button:hover{
-    border-bottom: 4px solid #146A20;
+.room-info_button {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .room-detail_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        margin-bottom: 20px;
+        margin-right: 40px;
+        align-items: center;
+    }
+
+    .room-detail_container:hover {
+        border: 3px solid #a2a2a2;
+    }
+
+    .room-image {
+        margin: 20px;
+    }
+
+    .room-detail_description {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-auto-rows: 1fr 1fr 1fr;
+        width: 1000px;
+        border-bottom: none;
+    }
+
+    .room-title {
+        font-size: 20px;
+    }
+
+    .room-price {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        height: 20px;
+        margin-top: 16px;
+        margin-left: 150px;
+    }
+
+    .room-book_button {
+        grid-column: 3 / 4;
+        margin-right: 50px;
+    }
+
+    .room-info_button {
+        display: block;
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        margin-top: 7px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 5px;
+        text-decoration: none;
+        background-color: #fcd103;
+        border: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: white;
+        border-bottom: 4px solid #f09218;
+    }
+
+
 }

@@ -16,7 +16,8 @@ class RoomDetail extends Component {
                 <div className="room-detail_description">
                     <h2 className="room-title">{item.title}</h2>
                     <p className="room-price">{item.pricePerMonth}€</p>
-                    <button className="room-button" type="submit"> Book now !</button>
+                    <button className="room-info_button" type="submit">More Details</button> 
+                    <button className="room-book_button" type="submit">Book now !</button>                                   
                 </div>
                 
             </div>

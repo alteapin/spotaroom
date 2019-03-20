@@ -13,3 +13,41 @@
     height: 75px;
     margin-left: 25px;
 }
+
+.header-links_container {
+    display: none;
+}
+
+.header_links {
+    font-size: 1px;
+}
+
+@media (min-width: 768px) {
+    .header_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .header-links_container {
+        display: block;
+        margin-top: 25px;
+    }
+
+.header_links {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 20px;
+    color: #a2a2a2;
+}
+
+.header_links:hover {
+    color: #146A20;
+}
+
+.links-divider {
+    color: #a2a2a2;
+}
+
+}
