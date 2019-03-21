@@ -1,0 +1,27 @@
+.input_container {
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+.input-address {
+    border: none;
+    border-bottom: 1px solid #a2a2a2;
+    background: #d2d2d2;
+    outline: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.input-address:focus {
+    border-bottom: 1px solid #146A20
+}
+
+@media (min-width: 768px) {
+    .input_container {
+        margin-top: 10px;
+    }
+
+    .input-address {
+        font-size: 16px;
+        height: 20px;
+    }
+}
