@@ -7,7 +7,6 @@ import Filter from './components/Filter/Filter';
 
 
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +20,8 @@ class App extends Component {
     this.getUserResearch = this.getUserResearch.bind(this);
   } 
 
-  filterAdress () {
+
+  filterAddress () {
     const filteredResults = this.state.results.filter(item => {
       const address = `${item.title}`;
       
@@ -35,12 +35,11 @@ class App extends Component {
   }
 
 
-
   getUserResearch (e) {
-    const userAdress = e.currentTarget.value;
+    const userAddress = e.currentTarget.value;
     
     this.setState({
-      address: userAdress
+      address: userAddress
     });
   }  
 
@@ -51,7 +50,6 @@ class App extends Component {
 
         const getUniqueId = data.homecards.map((item, index) => { return {...item, id:index}});
         
-
         this.setState({
           results: getUniqueId
         });
@@ -60,8 +58,8 @@ class App extends Component {
 
 
   render() {
-    const filteredResults = this.filterAdress();
-    // const results = this.state.results;
+    const filteredResults = this.filterAddress();
+    const {address} = this.state.address;
 
     return (
       <div className="App">
@@ -73,7 +71,7 @@ class App extends Component {
           onChange= {this.getUserResearch} />
           <RoomList
             filteredResults = {filteredResults}
-            // results={results}
+            address = {address}
           />
         </main>
       </div>

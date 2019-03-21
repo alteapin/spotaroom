@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './RoomList.scss';
 import RoomDetail from '../RoomDetail/RoomDetail';
 
+
 class RoomList extends Component {
   render() {
     const { filteredResults } = this.props;
@@ -22,6 +23,8 @@ class RoomList extends Component {
     );
   }
 }
+
+
 
 export default RoomList;
 
