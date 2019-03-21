@@ -22,7 +22,7 @@ class App extends Component {
     getRooms()
       .then(data => {
 
-        const getUniqueId = data.homecards.map((item, index) => { return {...item, id:index}});
+        const getUniqueId = data.homecards.map((item, index) => {return {...item, id:index}});
         
 
         this.setState({
