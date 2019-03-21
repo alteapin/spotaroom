@@ -4,12 +4,12 @@ import RoomDetail from '../RoomDetail/RoomDetail';
 
 class RoomList extends Component {
   render() {
-    const { results } = this.props;
+    const { filteredResults } = this.props;
 
     return (
       <div>
         <ul className="room-list">
-          {results.map(item => {
+          {filteredResults.map(item => {
             return (
               <li key={item.id}>
                 <RoomDetail
