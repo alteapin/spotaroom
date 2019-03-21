@@ -11,7 +11,7 @@ class RoomList extends Component {
         <ul className="room-list">
           {results.map(item => {
             return (
-              <li>
+              <li key={item.id}>
                 <RoomDetail
                   item={item} />
               </li>
