@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Filter.scss';
+import PropTypes from 'prop-types';
 
 class Filter extends Component {
     render() {
@@ -16,6 +17,10 @@ class Filter extends Component {
             </div>
         );
     }
+}
+
+Filter.propTypes= {
+    onChangeAction: PropTypes.func
 }
 
 export default Filter;
