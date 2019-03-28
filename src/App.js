@@ -4,6 +4,7 @@ import { getRooms } from './services/roomServices.js';
 import RoomList from './components/RoomList/RoomList';
 import Header from './components/Header/Header';
 import Filter from './components/Filter/Filter';
+import Price from './components/Price/Price';
 
 
 
@@ -13,17 +14,19 @@ class App extends Component {
 
     this.state = {
       results: [],
-      address: ''
+      address: '',
+      price: ''
     };
 
     this.getRoomsInfo();
+    this.getUserPrice = this.getUserPrice.bind(this);
     this.getUserResearch = this.getUserResearch.bind(this);
   } 
 
 
-  filterAddress () {
-    const filteredResults = this.state.results.filter(item => {
-      const address = `${item.title}`;
+  filterAddress (sortedPrice) {
+    const filteredResults = sortedPrice.filter(item => {
+      const address = item.title;
       
       if (address.toLocaleLowerCase().includes(this.state.address.toLocaleLowerCase())) {
         return true;
@@ -34,6 +37,18 @@ class App extends Component {
     return filteredResults;
   }
 
+  orderPrice () {
+    const sortedPrice = this.state.results.sort((a, b) => {
+      if (this.state.price === 'asc') {
+        return (a.pricePerMonth > b.pricePerMonth ? 1 : -1)
+      } else {
+        return (a.pricePerMonth < b.pricePerMonth ? 1 : -1);
+      }
+    });
+    return sortedPrice;
+
+  }
+
 
   getUserResearch (e) {
     const userAddress = e.currentTarget.value;
@@ -42,6 +57,14 @@ class App extends Component {
       address: userAddress
     });
   }  
+
+  getUserPrice (e) {
+    const userPrice = e.currentTarget.value;
+    
+    this.setState({
+      price: userPrice
+    });
+  }
 
 
   getRoomsInfo() {
@@ -58,8 +81,10 @@ class App extends Component {
 
 
   render() {
-    const filteredResults = this.filterAddress();
-    const {address} = this.state.address;
+    const sorteredPrice = this.orderPrice();
+    const filteredResults = this.filterAddress(sorteredPrice);
+    const {address} = this.state;
+    
 
     return (
       <div className="App">
@@ -69,6 +94,8 @@ class App extends Component {
         <main className="main">
           <Filter 
           onChange= {this.getUserResearch} />
+          <Price 
+          onChange ={this.getUserPrice}/>
           <RoomList
             filteredResults = {filteredResults}
             address = {address}
